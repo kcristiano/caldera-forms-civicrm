@@ -201,7 +201,7 @@ class CiviCRM_Caldera_Forms_Membership_Processor {
 						$is_member = civicrm_api3( 'Membership', 'get', [
 							'sequential' => 1,
 							'is_test' => 0,
-							'status_id' => [ 'IN' => [ 'New', 'Current', 'Grace' ] ],
+							'status_id' => [ 'IN' => [ 'New', 'Current', 'Grace', 'Upcoming' ] ],
 							'contact_id' => $transient->contacts->{$contact_link},
 						] );
 
